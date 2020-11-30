@@ -22,7 +22,6 @@ export default class CreateProduct extends React.Component {
     this.setState({
       [field]: value
     });
-    console.log(this.state);
   }
 
   render() {

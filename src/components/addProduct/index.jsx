@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Registry } from "../../state/common/store/registry";
-
 import "./addProduct.scss";
 
 
