@@ -8,7 +8,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <main>
+      <main style={{position: "relative"}}>
         <h1>Frontend Test Task</h1>
         <ProductList />
       </main>
