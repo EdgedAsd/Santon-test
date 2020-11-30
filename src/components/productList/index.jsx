@@ -1,6 +1,7 @@
 import React from "react";
 import { withStore } from "../../state/withStore";
 import { Product } from "../product";
+import AddProduct from "../addProduct";
 import "./product-list.scss";
 
 class ProductList extends React.Component {
@@ -12,6 +13,8 @@ class ProductList extends React.Component {
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
+        <AddProduct />
+        <CreateProduct display="none" />
       </div>
     );
   }

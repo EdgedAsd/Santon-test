@@ -6,6 +6,8 @@ export class Store {
       throw new Error("Could not create store without name!");
     }
 
+
+    console.log(1111,initialConfig.reducers);
     const config = {
       options: this.getOptions(initialConfig.options),
       reducers: this.getReducers(initialConfig.reducers),
@@ -53,7 +55,7 @@ export class Store {
   }
 
   dispatch(type, payload) {
-    for (const reducer of this.reducers) {
+    for (let reducer of this.config.reducers) {
       if (reducer.type === type) {
         if (typeof reducer.action === "function") {
           this.data = reducer.action(this.data, payload);

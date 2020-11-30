@@ -1,5 +1,6 @@
 import React from "react";
 import "./product.scss";
+import DeleteProduct from "../deleteProduct";
 
 export class Product extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export class Product extends React.Component {
             alt=""
           />
         </div>
+        <DeleteProduct product_id={product.id} />
       </div>
     );
   }

@@ -5,6 +5,7 @@ import './index.scss';
 import ProductList from "./components/productList";
 
 export class App extends React.Component {
+
   render() {
     return (
       <main>
