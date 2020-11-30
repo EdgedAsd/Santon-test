@@ -10,27 +10,27 @@ class SaveProduct extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(event) {
 
-    // let data = this.props.getValues();
-    console.log(1);
+    let data = this.props.getValues();
+    event.preventDefault();
 
-    // Registry.dispatch("ADD_PRODUCT", {
-    //   product: {
-    //     id: 1,
-    //     title: 1,
-    //     description: 1,
-    //     price: 1
-    //   }
-    // });
+    Registry.dispatch("ADD_PRODUCT", {
+      product: {
+        id: data.id,
+        title: data.title,
+        description: data.description,
+        price: data.price
+      }
+    });
 
-    // this.props.hideClick();
+    this.props.hideClick();
   }
 
   render() {
     
     return (
-      <button className="save_btn form_btn" onClick={this.handleClick}>Save</button>
+      <input className="save_btn form_btn" onClick={this.handleClick} value="Save" type="submit"/>
     );
   }
 }

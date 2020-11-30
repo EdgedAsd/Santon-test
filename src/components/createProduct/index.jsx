@@ -21,7 +21,8 @@ export default class CreateProduct extends React.Component {
   getInfo(field, value) {
     this.setState({
       [field]: value
-    })
+    });
+    console.log(this.state);
   }
 
   render() {
@@ -35,7 +36,7 @@ export default class CreateProduct extends React.Component {
 
           <div className="buttons">
             <button className="cancel_btn form_btn" onClick={this.props.hideClick}>Cancel</button>
-            <SaveProduct getValues={() => this.state} />
+            <SaveProduct getValues={() => this.state} hideClick={this.props.hideClick}/>
           </div>
         </form>
       </div>
